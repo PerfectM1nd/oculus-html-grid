@@ -1,22 +1,127 @@
-html{
-  box-sizing: border-box;
+@font-face {
+	font-family: 'Helvetica', sans-serif;
+	src: url(../fonts/helvetica.woff2);
+	font-style: normal;
+	font-weight: 400;
 }
 
-*,
-*::before,
-*::after{
-  box-sizing: inherit;
+@font-face {
+	font-family: 'Helvetica', sans-serif;
+	src: url(../fonts/helvetica-bold.woff2);
+	font-style: normal;
+	font-weight: 700;
 }
 
-a{
-  color: inherit;
-  text-decoration: none;
+body {
+	font-family: 'Helvetica', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.4;
+	color: #5C5C5E;
 }
 
-li{
-  list-style: none;
+.header {
+	border-bottom: 1px solid #CACAD6;
 }
 
-img{
-  max-width: 100%;
+.container {
+	max-width: 1220px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	height: 80px;
+}
+
+.menu {
+	display: flex;
+	gap: 20px;
+}
+
+.logo {
+	justify-self: center;
+}
+
+.basket {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-self: flex-end;
+}
+
+.basket .backed__count {
+	display: none;
+}
+
+.basket--on .backed__count {
+	position: absolute;
+	bottom: -5px;
+	right: -5px;
+	font-size: 11px;
+	width: 15px;
+	height: 15px;
+	background-color: #000;
+	border-radius: 50%;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+}
+
+.top {
+	min-height: calc(100vh - 81px);
+	background-image: url(../images/top-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+}
+
+.title {
+	padding-top: 16%;
+	font-size: 96px;
+	font-weight: 400;
+}
+
+.subtitle {
+	font-size: 36px;
+}
+
+.offer-text {
+	font-size: 13px;
+
+}
+
+.buy-text {
+	padding-top: 6px;
+	font-size: 13px;
+}
+
+.buy-btn {
+	margin-top: 50px;
+	cursor: pointer;
+	border: none;
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+	display: flex;
+	padding: 0;
+	background-color: transparent;
+}
+
+.buy-btn__text {
+	color: #F6F4F5;
+	padding: 20px 110px;
+	background: linear-gradient(180deg, #da61fa 0%, rgba(99, 40, 239, 0.93) 100%);
+}
+
+.buy-btn__price {
+	color: #5C5C5E;
+	padding: 20px 105px;
+	border-image: linear-gradient(180deg, #da61fa 0%, rgba(99, 40, 239, 0.93) 100%) 1 / 1px;
+	background-color: transparent;
 }
